@@ -45,12 +45,5 @@ resource "aws_security_group" "ec2_public_security_group" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  egress {
-    from_port   = 8080
-    protocol    = "TCP" 
-    to_port     = 8080
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
   tags = var.sg_tags
 }
