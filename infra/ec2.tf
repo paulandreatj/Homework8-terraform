@@ -8,7 +8,3 @@ resource "aws_instance" "ec2_instance" {
   key_name                    = var.key_pair_name
   user_data                   = var.user_data #context where is executed
 }
-
-resource "aws_eip" "elastic_ip" {
-    instance = aws_instance.ec2_instance.id
-}

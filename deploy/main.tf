@@ -8,7 +8,7 @@ module "deploy_ec2" {
   user_data     = file("../infra/user_data.sh")
 
   subnet_id = "subnet-04e972f3a706c00e8"
-  public_ip = false
+  public_ip = true
 
   sg_name        = "group5-sg"
   sg_description = "Allow http over port 80 and ssh over port 22"
