@@ -48,3 +48,37 @@ variable "aws_region" {
   type        = string
   description = "AWS default region (where to deploy your resources)"
 }
+
+variable "skip_final_snapshot" {
+  type = bool
+  description = "Do you want to skip final snapshot (true->yes,false->no) "
+}
+
+##############################################
+# Security group variables
+##############################################
+
+variable "sg_name" {
+  type        = string
+  description = "Security group name"
+}
+
+variable "sg_description" {
+  type        = string
+  description = "Security group description"
+}
+
+variable "vpc_id" {
+  type        = string
+  description = "VPC ID"
+}
+
+variable "sg_tags" {
+  description = "SG resource tags"
+  type        = map(string)
+}
+
+#variable "vpc_security_group_ids" {
+ # type = map(string)
+  #description = "VPC security group id"
+#}

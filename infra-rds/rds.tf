@@ -17,4 +17,8 @@ resource "aws_db_instance" "group5-rds" {
   port                 = 5432
 # Subnet group to connect the database instance
   db_subnet_group_name = aws_db_subnet_group.group5-subnet.name
+  
+  skip_final_snapshot = var.skip_final_snapshot
+
+  #vpc_security_group_ids = [ var.vpc_security_group_ids ]
 }
