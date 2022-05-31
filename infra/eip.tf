@@ -4,5 +4,6 @@ resource "aws_eip_association" "eip_assoc" {
 }
 resource "aws_eip" "elasticip" {
   instance = aws_instance.ec2_instance.id
-  vpc = true
+  vpc = var.eip_vpc
+  tags = var.eip_tags
 }
