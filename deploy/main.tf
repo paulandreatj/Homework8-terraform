@@ -1,7 +1,7 @@
 module "deploy_ec2_and_rds" {
   source        = "../infra"
   aws_region    = "us-east-1"
-  instance_type = "t2.small"
+  instance_type = "t2.medium"
   ec2_tags      = { Name = "group5-ec2" }
   ami_id        = "ami-005de95e8ff495156"
   key_pair_name = "grupo5"
