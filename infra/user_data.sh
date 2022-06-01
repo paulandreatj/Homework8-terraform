@@ -28,3 +28,6 @@ sudo newgrp docker
 
 ## Restart Jenkins to load docker access
 sudo service jenkins restart
+
+## Install NodeJS
+sudo apt install nodejs -y
